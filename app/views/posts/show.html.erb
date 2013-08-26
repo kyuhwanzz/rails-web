@@ -1,0 +1,23 @@
+<h4><%= @post.title %></h4>
+
+<p style="text-align: right">
+  Last modified: <%= @post.updated_at.in_time_zone("Seoul")%>
+</p>
+
+<p>
+  <%= h(@post.text).gsub(/\n/, '<br/>').html_safe %>
+</p>
+
+<hr>
+
+<h4>Comments</h4>
+<%= render "comments/form" %>
+
+<table class="table table-condensed">
+  <tbody>
+    <%= render @post.comments %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

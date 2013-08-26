@@ -1,0 +1,14 @@
+<% if comment.commenter && comment.body %>
+  <tr>
+    <td class="span2" style="text-align:center">
+      <%= comment.commenter %>
+    </td>
+    <td class="span9">
+      <%= comment.body %>
+    </td>
+    <td class="span1">
+      <%= link_to 'Delete', [comment.post, comment],
+          method: :delete, data: { confirm: 'Are you sure' } %>
+    </td>
+</tr>
+<% end %>

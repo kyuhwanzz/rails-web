@@ -1,0 +1,5 @@
+<%= form_for [@post, @post.comments.build], html: { class: "form-inline" }  do |f| %>
+  <%= f.text_field :commenter, { class: "span2", placeholder: "Commenter" } %>
+  <%= f.text_field :body, { class: "span9", placeholder: "Comment" } %>
+  <%= f.submit "Add", { class: "span1" }  %>
+<% end %>

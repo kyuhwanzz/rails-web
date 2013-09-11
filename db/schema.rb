@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130729065457) do
+ActiveRecord::Schema.define(version: 20130910135159) do
 
   create_table "comments", force: true do |t|
     t.string   "commenter"
@@ -22,6 +22,19 @@ ActiveRecord::Schema.define(version: 20130729065457) do
   end
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
+
+  create_table "mailers", force: true do |t|
+    t.boolean  "activate",   default: false
+    t.string   "address",    default: "localhost"
+    t.integer  "port",       default: 25
+    t.string   "domain"
+    t.string   "user_name"
+    t.string   "password"
+    t.string   "auth",       default: "plain"
+    t.boolean  "tls",        default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", force: true do |t|
     t.string   "title"

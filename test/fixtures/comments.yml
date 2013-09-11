@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  commenter: 
-  body: MyText
+  commenter: FirstCommenter
+  body: FirstComment
   post_id: 
 
 two:
-  commenter: 
-  body: MyText
+  commenter: SecondCommenter
+  body: SecondComment
   post_id: 

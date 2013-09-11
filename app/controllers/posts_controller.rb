@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 	http_basic_authenticate_with name: "test", password: "test", except: [:index, :show]
 
 	def index
-		@posts = Post.all
+		@posts = Post.order("updated_at DESC")
 	end
 
 	def new
@@ -16,6 +16,7 @@ class PostsController < ApplicationController
 		@post = Post.new(post_params)
 
 		if @post.save
+            PostMailer.send_email_notification(@post).deliver
 			redirect_to @post
 		else
 			render 'new'

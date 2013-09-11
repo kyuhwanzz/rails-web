@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  text: MyText
+  title: FirstPostTitle
+  text: FirstPostText
 
 two:
-  title: MyString
-  text: MyText
+  title: SecondPostTitle
+  text: SecondPostText

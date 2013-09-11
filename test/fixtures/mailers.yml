@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  address: smtp.mail.nate.com
+  port: 465
+  domain: localhost
+  user_name: kyuhwanzz@nate.com
+  password: t9hUDTT9b+BpiYtmXrrd7A==
+  auth: plain
+  tls: true
+  activate: true
+
+two:
+  address: smtp.gmail.com
+  port: 587
+  domain: localhost
+  user_name: kyuhwanzz@gmail.com
+  password: SLtwaIgvz1x32ys/ltY8kQ==
+  auth: plain
+  tls: true
+  activate: true
